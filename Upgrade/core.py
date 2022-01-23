@@ -127,6 +127,7 @@ def deckSetting(root):
             grid(row=1, column=column, sticky=W, padx=2, pady=1)
         column += 1
     decks.set(2)
+    set_decks(decks.get())
     return deck
 
 
@@ -161,7 +162,8 @@ def selectModule(root):
 def reset():
     suits.set(settings.suits[0])
     types.set(settings.types[0])
-    s.reset()
+    s.setTrumpSuit(suits.get())
+    s.setLevel(types.get())
     d.reset(s)
     count()
 
@@ -204,8 +206,8 @@ def init():
     # 记牌器组件
     recorder(root).grid(row=0, column=2, padx=5, pady=2, sticky=N)
 
-    count()
     reset()
+    count()
 
     root.mainloop()
 
