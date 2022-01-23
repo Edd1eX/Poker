@@ -24,4 +24,4 @@ scores = {'5': 5, '10': 10, 'K': 10}
 
 decks = 2               # 副数
 
-vesion = 'v1.0'
+vesion = 'v1.2'

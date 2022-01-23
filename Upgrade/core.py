@@ -160,6 +160,7 @@ def selectModule(root):
 
 
 def reset():
+    s.reset()
     suits.set(settings.suits[0])
     types.set(settings.types[0])
     s.setTrumpSuit(suits.get())
